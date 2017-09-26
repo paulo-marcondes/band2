@@ -5,44 +5,11 @@
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <meta name="description" content="">
     <meta name="author" content="">
-    <link rel="icon" href="../../../../favicon.ico">
 
-    <title>Sticky Footer Template for Bootstrap</title>
+    <title>Me indique uma banda</title>
 
     <!-- Bootstrap core CSS -->
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta/css/bootstrap.min.css" integrity="sha384-/Y6pD6FV/Vv2HJnA6t+vslU6fwYXjCFtcEpHbNJ0lyAFsXTsjBbfaDjzALeQsN6M" crossorigin="anonymous">
-
-    
-<style>
-    
-html {
-  position: relative;
-  min-height: 100%;
-}
-body {
-  margin-bottom: 60px;
-}
-.footer {
-  position: absolute;
-  bottom: 0;
-  width: 100%;
-  height: 60px;
-  line-height: 60px; /* Vertically center the text there */
-  background-color: #f5f5f5;
-}
-
-.container {
-  width: auto;
-  max-width: 680px;
-  padding: 0 15px;
-}
-
-.suggest{
-	margin-top: 50%;
-	margin-bottom: 50%;
-}
-
-</style>
 
  <script>
 
@@ -70,9 +37,12 @@ body {
     }
 
 var hominis = "http://hominiscanidae.org/search/label/" + rand;
+var spotify = "https://open.spotify.com/search/results/" + rand;
 document.getElementById("link").setAttribute("href",hominis);
+document.getElementById("link2").setAttribute("href",spotify);
 document.querySelector('#result').innerHTML = rand;
 document.querySelector('#link').innerHTML = hominis;
+document.querySelector('#link2').innerHTML = spotify;
 };
 
 </script>
@@ -81,23 +51,21 @@ document.querySelector('#link').innerHTML = hominis;
 
   <body>
 
-    <!-- Begin page content -->
     <h1 style="text-align:center;"><img alt="Hominis Canidae" src="http://3.bp.blogspot.com/-GamqOM_oMzc/VirUxw-Xx_I/AAAAAAAAR0A/995GU5RF3AE/s1600-r/logo_site_final.png"></h1>
     <div class="container">
-      <div class="mt-1">
-        
-      </div>
 
       <div class="suggest">
-        <p><input type="radio" name="gender" id="alt" value="Alternativo" /> Alternativo</p>
-        <p><input type="radio" name="gender" id="rap" value="Rap" /> Rap</p>
-        <p><input type="radio" name="gender" id="rock" value="Rock" /> Rock</p>
-        <p><input type="radio" name="gender" id="instrumental" value="Instrumental" /> Instrumental</p>
-        <p><input id="clickMe" type="button" value="Me indique uma banda!" onclick="RandomBands();" /></p>
+        <span><input type="radio" name="gender" id="alt" value="Alternativo" /> Alternativo</span>
+        <span><input type="radio" name="gender" id="rap" value="Rap" /> Rap</span>
+        <span><input type="radio" name="gender" id="rock" value="Rock" /> Rock</span>
+        <span><input type="radio" name="gender" id="instrumental" value="Instrumental" /> Instrumental</span>
+        <p align="center"><input id="clickMe" type="button" value="Me indique uma banda!" onclick="RandomBands();" /></p>
        
+
        <h4 id="result"></h4>
        
-       <a id="link"></a>
+       <p>Hominis Canidae: <a id="link"></a></p>
+       <p>Spotify: <a id="link2"></a></p>
        </div>
     </div>
 
